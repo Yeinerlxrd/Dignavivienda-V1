@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap');
+@import 'tailwindcss';
+
+@theme inline {
+  --font-heading: 'Poppins', system-ui, sans-serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+
+  --color-primary:       #1E3A8A;
+  --color-primary-hover: #1e40af;
+  --color-primary-light: #dbeafe;
+  --color-primary-fg:    #ffffff;
+
+  --color-accent:        #F59E0B;
+  --color-accent-hover:  #d97706;
+  --color-accent-fg:     #1c1917;
+
+  --color-success:       #059669;
+  --color-success-light: #d1fae5;
+  --color-success-fg:    #ffffff;
+
+  --color-danger:        #dc2626;
+  --color-danger-light:  #fee2e2;
+
+  --color-surface:       #F3F4F6;
+  --color-card:          #ffffff;
+  --color-border:        #e5e7eb;
+  --color-muted:         #6b7280;
+  --color-text:          #111827;
+  --color-text-secondary:#374151;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Inter', system-ui, sans-serif;
+  color: #111827;
+  background: #F3F4F6;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Poppins', system-ui, sans-serif;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #d1d5db; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #9ca3af; }
+
+/* Smooth transitions */
+.screen-enter { animation: fadeIn 0.2s ease; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
+
+/* Badge pill */
+.badge-verified {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: #d1fae5;
+  color: #065f46;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 20px;
+  font-family: 'Poppins', sans-serif;
+}
+.badge-pending {
+  background: #fef3c7;
+  color: #92400e;
+}
+.badge-inactive {
+  background: #f3f4f6;
+  color: #6b7280;
+}
+
+/* Wizard steps */
+.step-active { background: #1E3A8A; color: white; }
+.step-done   { background: #059669; color: white; }
+.step-idle   { background: #e5e7eb; color: #6b7280; }
+
+/* Range slider */
+input[type=range] { accent-color: #1E3A8A; }
+
+/* Custom focus */
+button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
+  outline: 2px solid #1E3A8A;
+  outline-offset: 2px;
+}
