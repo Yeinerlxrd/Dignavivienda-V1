@@ -59,5 +59,6 @@ El registro asigna el rol automáticamente según la intención del usuario:
 - `publish` → `propietario`
 
 El rol `administrador` no se puede seleccionar desde el registro público.
+```Creado por Juan José Corredor Ahumada y Yeiner José Sánchez Colina ```
 
 El dashboard se adapta al rol almacenado en la base de datos.
